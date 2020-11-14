@@ -9,6 +9,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import br.com.zup.estrela.prefeitura.enums.Area;
@@ -26,8 +27,8 @@ public class Secretaria {
 	@Enumerated(EnumType.STRING)
 	private Area area;
 
-	@Column(name = "orcamento_projeto", nullable = false)
-	private Double orcamentoProjeto;
+	//@Column(name = "orcamento_projeto", nullable = false)
+	//private Double orcamentoProjeto;
 	
 	@Column(name = "orcamento_folha", nullable = false)
 	private Double orcamentoFolha;
@@ -44,9 +45,10 @@ public class Secretaria {
 	@Column(nullable =  false)
 	private String email;
 	
-	List<Funcionario> funcionarios;
+	@OneToMany
+	private List<Funcionario> funcionarios;
 	
-	List<Projeto> projetos;
+	//List<Projeto> projetos;
 	
 	
 	public Long getIdSecretaria() {
@@ -65,13 +67,13 @@ public class Secretaria {
 		this.area = area;
 	}
 
-	public Double getOrcamentoProjetos() {
-		return orcamentoProjeto;
-	}
-
-	public void setOrcamentoProjetos(Double orcamentoProjetos) {
-		this.orcamentoProjeto = orcamentoProjetos;
-	}
+//	public Double getOrcamentoProjetos() {
+//		return orcamentoProjeto;
+//	}
+//
+//	public void setOrcamentoProjetos(Double orcamentoProjetos) {
+//		this.orcamentoProjeto = orcamentoProjetos;
+//	}
 
 	public Double getOrcamentoFolha() {
 		return orcamentoFolha;

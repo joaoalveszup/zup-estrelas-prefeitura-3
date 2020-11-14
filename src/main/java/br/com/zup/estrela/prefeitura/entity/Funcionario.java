@@ -33,7 +33,7 @@ public class Funcionario {
 	
 	@ManyToOne
 	@JoinColumn(name = "id_secretaria", foreignKey=@ForeignKey(name="FK_FUNCIONARIO"))
-	private Long idSecretaria;
+	private Secretaria secretaria;
 	
 	@Column(nullable = false)
 	private String funcao;
@@ -76,12 +76,12 @@ public class Funcionario {
 		this.salario = salario;
 	}
 
-	public Long getIdSecretaria() {
-		return idSecretaria;
+	public Secretaria getSecretaria() {
+		return secretaria;
 	}
 
-	public void setIdSecretaria(Long idSecretaria) {
-		this.idSecretaria = idSecretaria;
+	public void setSecretaria(Secretaria secretaria) {
+		this.secretaria = secretaria;
 	}
 
 	public String getFuncao() {

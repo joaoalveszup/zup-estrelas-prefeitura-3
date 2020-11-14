@@ -9,5 +9,5 @@ public class ZupEstrelasPrefeituraApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ZupEstrelasPrefeituraApplication.class, args);
 	}
-
+ 
 }

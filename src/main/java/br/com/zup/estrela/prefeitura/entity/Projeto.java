@@ -32,7 +32,7 @@ public class Projeto {
 	
 	@ManyToOne
 	@JoinColumn(name = "id_secretaria", foreignKey=@ForeignKey(name= "FK_PROJETO"))
-	private long idSecretaria;
+	private Secretaria secretaria;
 	
 	@Column(name = "data_inicio", nullable = false)
 	private LocalDate dataInicio;
@@ -75,12 +75,12 @@ public class Projeto {
 		this.custo = custo;
 	}
 
-	public long getIdSecretaria() {
-		return idSecretaria;
+	public Secretaria getSecretaria() {
+		return secretaria;
 	}
 
-	public void setIdSecretaria(long idSecretaria) {
-		this.idSecretaria = idSecretaria;
+	public void setSecretaria(Secretaria secretaria) {
+		this.secretaria = secretaria;
 	}
 
 	public LocalDate getDataInicio() {
