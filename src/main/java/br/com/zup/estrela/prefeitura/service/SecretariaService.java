@@ -13,7 +13,8 @@ import br.com.zup.estrela.prefeitura.repository.SecretariaRepository;
 
 @Service
 public class SecretariaService implements ISecretariaService {
-
+	
+	//mudar para um ennum
 	private static final String SECRETARIA_CADASTRADA_COM_SUCESSO = "Secretaria cadastrada com Sucesso.";
 	private static final String SECRETARIA_ALTERADA_COM_SUCESSO = "Secretaria alterada com Sucesso.";
 	private static final String SECRETARIA_REMOVIDA_COM_SUCESSO = "Secretaria removida com Sucesso.";
@@ -24,7 +25,7 @@ public class SecretariaService implements ISecretariaService {
 	@Autowired
 	SecretariaRepository secretariaRepository;
 	
-	public MensagemDTO adicionarSecretaria (Secretaria secretaria) {
+	public MensagemDTO adicionarSecretaria (Secretaria secretaria) { 
 		
 		if (secretariaRepository.existsById(secretaria.getIdSecretaria())) {
 			return new MensagemDTO(SECRETARIA_JA_CADASTRADA);

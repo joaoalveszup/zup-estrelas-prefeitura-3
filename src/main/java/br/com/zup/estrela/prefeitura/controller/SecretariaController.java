@@ -21,10 +21,10 @@ import br.com.zup.estrela.prefeitura.service.ISecretariaService;
 
 @RestController
 @RequestMapping("/secretarias")
-public class PrefeituraController {
+public class SecretariaController {
 
 	@Autowired
-	ISecretariaService secretariaService;
+	ISecretariaService secretariaService; 
 	
 	@PostMapping (produces = {MediaType.APPLICATION_JSON_VALUE})
 	public MensagemDTO adicionaSecretaria(@RequestBody Secretaria secretaria) {

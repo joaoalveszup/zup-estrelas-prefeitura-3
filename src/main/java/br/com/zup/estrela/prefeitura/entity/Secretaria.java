@@ -1,5 +1,7 @@
 package br.com.zup.estrela.prefeitura.entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -25,7 +27,7 @@ public class Secretaria {
 	private Area area;
 
 	@Column(name = "orcamento_projeto", nullable = false)
-	private Double orcamentoProjetos;
+	private Double orcamentoProjeto;
 	
 	@Column(name = "orcamento_folha", nullable = false)
 	private Double orcamentoFolha;
@@ -42,9 +44,9 @@ public class Secretaria {
 	@Column(nullable =  false)
 	private String email;
 	
-//	List<Funcionario> funcionarios;
+	List<Funcionario> funcionarios;
 	
-//	List<Projeto> projetos;
+	List<Projeto> projetos;
 	
 	
 	public Long getIdSecretaria() {
@@ -64,11 +66,11 @@ public class Secretaria {
 	}
 
 	public Double getOrcamentoProjetos() {
-		return orcamentoProjetos;
+		return orcamentoProjeto;
 	}
 
 	public void setOrcamentoProjetos(Double orcamentoProjetos) {
-		this.orcamentoProjetos = orcamentoProjetos;
+		this.orcamentoProjeto = orcamentoProjetos;
 	}
 
 	public Double getOrcamentoFolha() {
