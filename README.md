@@ -18,5 +18,8 @@
 
 - Contém a estrutura para criar banco de dados da Prefeiruta.
 
+### JAVA
 
+#### ConnectionFactory.java
+- Conexão direta com o banco de dados por meio do JDBC;
 
